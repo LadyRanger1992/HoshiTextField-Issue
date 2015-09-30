@@ -16,6 +16,8 @@
 		DCEECE291BBBDE7F00BEDCA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEECE271BBBDE7F00BEDCA6 /* LaunchScreen.storyboard */; };
 		DCEECE341BBBDE7F00BEDCA6 /* TestHoshiTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEECE331BBBDE7F00BEDCA6 /* TestHoshiTextFieldTests.m */; };
 		DCEECE3F1BBBDE7F00BEDCA6 /* TestHoshiTextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEECE3E1BBBDE7F00BEDCA6 /* TestHoshiTextFieldUITests.m */; };
+		DCEECE501BBBDF2200BEDCA6 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEECE4D1BBBDF2200BEDCA6 /* HoshiTextField.swift */; settings = {ASSET_TAGS = (); }; };
+		DCEECE511BBBDF2200BEDCA6 /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEECE4F1BBBDF2200BEDCA6 /* TextFieldsEffects.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		DCEECE3A1BBBDE7F00BEDCA6 /* TestHoshiTextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestHoshiTextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEECE3E1BBBDE7F00BEDCA6 /* TestHoshiTextFieldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestHoshiTextFieldUITests.m; sourceTree = "<group>"; };
 		DCEECE401BBBDE7F00BEDCA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCEECE4C1BBBDEA500BEDCA6 /* TestHoshiTextField-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestHoshiTextField-Bridging-Header.h"; sourceTree = "<group>"; };
+		DCEECE4D1BBBDF2200BEDCA6 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		DCEECE4E1BBBDF2200BEDCA6 /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
+		DCEECE4F1BBBDF2200BEDCA6 /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 		DCEECE151BBBDE7F00BEDCA6 /* TestHoshiTextField */ = {
 			isa = PBXGroup;
 			children = (
+				DCEECE4D1BBBDF2200BEDCA6 /* HoshiTextField.swift */,
+				DCEECE4E1BBBDF2200BEDCA6 /* TextFieldEffects.h */,
+				DCEECE4F1BBBDF2200BEDCA6 /* TextFieldsEffects.swift */,
 				DCEECE191BBBDE7F00BEDCA6 /* AppDelegate.h */,
 				DCEECE1A1BBBDE7F00BEDCA6 /* AppDelegate.m */,
 				DCEECE1C1BBBDE7F00BEDCA6 /* ViewController.h */,
@@ -113,6 +122,7 @@
 				DCEECE2A1BBBDE7F00BEDCA6 /* Info.plist */,
 				DCEECE221BBBDE7F00BEDCA6 /* TestHoshiTextField.xcdatamodeld */,
 				DCEECE161BBBDE7F00BEDCA6 /* Supporting Files */,
+				DCEECE4C1BBBDEA500BEDCA6 /* TestHoshiTextField-Bridging-Header.h */,
 			);
 			path = TestHoshiTextField;
 			sourceTree = "<group>";
@@ -205,6 +215,7 @@
 		DCEECE0B1BBBDE7F00BEDCA6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Luc Chelsea";
 				TargetAttributes = {
@@ -277,6 +288,8 @@
 				DCEECE1B1BBBDE7F00BEDCA6 /* AppDelegate.m in Sources */,
 				DCEECE181BBBDE7F00BEDCA6 /* main.m in Sources */,
 				DCEECE241BBBDE7F00BEDCA6 /* TestHoshiTextField.xcdatamodeld in Sources */,
+				DCEECE511BBBDF2200BEDCA6 /* TextFieldsEffects.swift in Sources */,
+				DCEECE501BBBDF2200BEDCA6 /* HoshiTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,10 +430,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TestHoshiTextField/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CD.TestHoshiTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestHoshiTextField/TestHoshiTextField-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -428,10 +444,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TestHoshiTextField/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CD.TestHoshiTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestHoshiTextField/TestHoshiTextField-Bridging-Header.h";
 			};
 			name = Release;
 		};
